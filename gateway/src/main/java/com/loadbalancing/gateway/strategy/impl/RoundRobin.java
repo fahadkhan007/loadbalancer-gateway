@@ -1,5 +1,6 @@
 package com.loadbalancing.gateway.strategy.impl;
 
+import com.loadbalancing.gateway.model.ServerInstance;
 import com.loadbalancing.gateway.strategy.LoadBalancingStrategy;
 import lombok.extern.apachecommons.CommonsLog;
 import org.springframework.stereotype.Component;
@@ -13,7 +14,7 @@ public class RoundRobin implements LoadBalancingStrategy {
     private final AtomicInteger counter=new AtomicInteger();
 
     @Override
-    public String getNextServer(List<String>servers){
+    public ServerInstance getNextServer(List<ServerInstance>servers){
         int index=counter.getAndIncrement()%servers.size();
         return servers.get(index);
     }
