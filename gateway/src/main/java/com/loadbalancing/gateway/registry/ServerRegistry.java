@@ -50,4 +50,8 @@ public class ServerRegistry {
     public List<ServerInstance>getHealthyServers(){
         return servers.stream().filter(ServerInstance::isHealthy).toList();
     }
+
+    public List<ServerInstance>getUnhealthyServers(){
+        return servers.stream().filter(serverInstance -> !serverInstance.isHealthy()).toList();
+    }
 }
