@@ -1,6 +1,6 @@
 package com.loadbalancing.gateway.service;
 
-import com.loadbalancing.gateway.DTO.HealthResponse;
+import com.loadbalancing.gateway.dto.HealthResponse;
 import com.loadbalancing.gateway.model.ServerInstance;
 import com.loadbalancing.gateway.registry.ServerRegistry;
 import lombok.RequiredArgsConstructor;

@@ -1,4 +1,4 @@
-package com.loadbalancing.gateway.DTO;
+package com.loadbalancing.gateway.dto;
 
 import lombok.Data;
 
